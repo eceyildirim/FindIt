@@ -5,7 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Arama</title>
-    <a href="FlatlyTheme/bootstrap">FlatlyTheme/bootstrap</a>
+    <link href="FlatlyTheme/bootstrap.css" rel="stylesheet" />
+    <link href="FlatlyTheme/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
