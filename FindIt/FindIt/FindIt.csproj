@@ -50,13 +50,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Script\script.js" />
+    <Content Include="Search.aspx" />
     <Content Include="Style\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FlatlyTheme\bootstrap.css" />
+    <Content Include="FlatlyTheme\bootstrap.min.css" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
