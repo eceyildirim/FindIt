@@ -1,2 +1,8 @@
 ﻿body {
 }
+.shelfCreate{ /*For MapDesign 'Raf Oluştur' rows*/
+    padding-bottom:1em;
+}
+.shelfInput{ /*For MapDesign input*/
+    width:80px;
+}
