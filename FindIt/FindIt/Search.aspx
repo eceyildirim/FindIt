@@ -9,7 +9,7 @@
     <link href="FlatlyTheme/bootstrap.min.css" rel="stylesheet" />
     <link href="Style/style.css" rel="stylesheet" />
 </head>
-<body style="background: linear-gradient(to bottom, #ccffff 0%, #ffffff 64%); overflow: hidden;" >
+<body class="body-costumer">
     <form id="form1" runat="server">
         <div class="container" style="margin: 300px auto;">
             <div class="row">

@@ -1,10 +1,25 @@
 ﻿body {
 }
-body-costumer { /*Müşteri kısımı için*/
+.body-costumer { /*Müşteri kısımı için*/
     background: linear-gradient(to bottom, #ccffff 0%, #ffffff 64%);
     background-repeat: no-repeat;
 }
-body-employee { /*Çalışan paneli için*/
+.body-employee { /*Çalışan paneli için*/
     background: linear-gradient(to bottom, #cde6e6 0%, #ffffff 64%);
     background-repeat: no-repeat;
+}
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    text-align: center;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    text-align: center;
+}
+
+:-ms-input-placeholder {
+    text-align: center;
 }
