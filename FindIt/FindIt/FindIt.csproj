@@ -64,7 +64,6 @@
     <Content Include="Search.aspx" />
     <Content Include="Style\style.css" />
     <Content Include="Web.config" />
-    <Content Include="öylesine.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="list.aspx.cs">
@@ -81,13 +80,6 @@
     </Compile>
     <Compile Include="Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="öylesine.aspx.cs">
-      <DependentUpon>öylesine.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="öylesine.aspx.designer.cs">
-      <DependentUpon>öylesine.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
