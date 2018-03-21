@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="loginSignup.aspx" />
+    <Content Include="Script\bootstrap.min.js" />
     <Content Include="Script\script.js" />
     <Content Include="Search.aspx" />
     <Content Include="Style\style.css" />
