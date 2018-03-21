@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    
     <div class="col-md-6">
         <div class="card">
             <div class="header">
@@ -40,7 +41,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="col-md-6">
         <div class="card">
             <div class="header">
@@ -88,5 +89,5 @@
             </div>
         </div>
     </div>
-    
+
 </asp:Content>

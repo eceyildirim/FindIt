@@ -66,6 +66,7 @@
     <Content Include="Panel-Theme\js\demo.js" />
     <Content Include="Panel-Theme\js\jquery-1.10.2.js" />
     <Content Include="Panel-Theme\js\light-bootstrap-dashboard.js" />
+    <Content Include="ProductOperations.aspx" />
     <Content Include="Script\jquery-3.2.1.min.js" />
     <Content Include="Script\jquery.cookie.js" />
     <Content Include="Script\script.js" />
@@ -87,6 +88,13 @@
     </Compile>
     <Compile Include="Panel.Master.designer.cs">
       <DependentUpon>Panel.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ProductOperations.aspx.cs">
+      <DependentUpon>ProductOperations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductOperations.aspx.designer.cs">
+      <DependentUpon>ProductOperations.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search.aspx.cs">
