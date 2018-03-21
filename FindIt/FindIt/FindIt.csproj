@@ -13,15 +13,13 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FindIt</RootNamespace>
     <AssemblyName>FindIt</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <TargetFrameworkProfile />
-    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,7 +29,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -40,30 +37,21 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Content Include="list.aspx" />
-=======
     <Content Include="CategoryOperations.aspx" />
     <Content Include="Images\sidebar.jpg" />
+    <Content Include="list.aspx" />
     <Content Include="Panel-Theme\css\animate.min.css" />
     <Content Include="Panel-Theme\css\bootstrap.min.css" />
     <Content Include="Panel-Theme\css\demo.css" />
@@ -71,35 +59,6 @@
     <Content Include="Panel-Theme\css\my-style.css" />
     <Content Include="Panel-Theme\css\pe-icon-7-stroke.css" />
     <Content Include="Panel-Theme\fonts\Pe-icon-7-stroke.svg" />
-    <Content Include="Panel-Theme\img\blog-black.jpg" />
-    <Content Include="Panel-Theme\img\blog-cover-christmas.jpg" />
-    <Content Include="Panel-Theme\img\blog-customer.jpg" />
-    <Content Include="Panel-Theme\img\blog-image.jpg" />
-    <Content Include="Panel-Theme\img\blog-wordpress.png" />
-    <Content Include="Panel-Theme\img\default-avatar.png" />
-    <Content Include="Panel-Theme\img\faces\face-0.jpg" />
-    <Content Include="Panel-Theme\img\faces\face-1.jpg" />
-    <Content Include="Panel-Theme\img\faces\face-2.jpg" />
-    <Content Include="Panel-Theme\img\faces\face-3.jpg" />
-    <Content Include="Panel-Theme\img\faces\face-4.jpg" />
-    <Content Include="Panel-Theme\img\faces\face-5.jpg" />
-    <Content Include="Panel-Theme\img\faces\face-6.jpg" />
-    <Content Include="Panel-Theme\img\faces\face-7.jpg" />
-    <Content Include="Panel-Theme\img\faces\l.jpe" />
-    <Content Include="Panel-Theme\img\favicon.ico" />
-    <Content Include="Panel-Theme\img\loading-bubbles.svg" />
-    <Content Include="Panel-Theme\img\mask.png" />
-    <Content Include="Panel-Theme\img\new_logo.png" />
-    <Content Include="Panel-Theme\img\opt_gsdk_new_thumbnail.jpg" />
-    <Content Include="Panel-Theme\img\opt_lbd_thumbnail.jpg" />
-    <Content Include="Panel-Theme\img\opt_pk_thumbnail.jpg" />
-    <Content Include="Panel-Theme\img\sidebar-1.jpg" />
-    <Content Include="Panel-Theme\img\sidebar-2.jpg" />
-    <Content Include="Panel-Theme\img\sidebar-3.jpg" />
-    <Content Include="Panel-Theme\img\sidebar-4.jpg" />
-    <Content Include="Panel-Theme\img\sidebar-5.jpg" />
-    <Content Include="Panel-Theme\img\theme.png" />
-    <Content Include="Panel-Theme\img\tim_80x80.png" />
     <Content Include="Panel-Theme\js\bootstrap-checkbox-radio-switch.js" />
     <Content Include="Panel-Theme\js\bootstrap-notify.js" />
     <Content Include="Panel-Theme\js\bootstrap-select.js" />
@@ -110,21 +69,12 @@
     <Content Include="Panel-Theme\js\light-bootstrap-dashboard.js" />
     <Content Include="Script\jquery-3.2.1.min.js" />
     <Content Include="Script\jquery.cookie.js" />
->>>>>>> ed42ff579f9ee30ad196fc1fa8ef78612703cbe7
     <Content Include="Script\script.js" />
     <Content Include="Search.aspx" />
     <Content Include="Style\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="list.aspx.cs">
-      <DependentUpon>list.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="list.aspx.designer.cs">
-      <DependentUpon>list.aspx</DependentUpon>
-=======
     <Compile Include="CategoryOperations.aspx.cs">
       <DependentUpon>CategoryOperations.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -132,13 +82,19 @@
     <Compile Include="CategoryOperations.aspx.designer.cs">
       <DependentUpon>CategoryOperations.aspx</DependentUpon>
     </Compile>
+    <Compile Include="list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Panel.Master.cs">
       <DependentUpon>Panel.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Panel.Master.designer.cs">
       <DependentUpon>Panel.Master</DependentUpon>
->>>>>>> ed42ff579f9ee30ad196fc1fa8ef78612703cbe7
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search.aspx.cs">
