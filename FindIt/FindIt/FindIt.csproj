@@ -51,7 +51,6 @@
   <ItemGroup>
     <Content Include="CategoryOperations.aspx" />
     <Content Include="Images\sidebar.jpg" />
-    <Content Include="list.aspx" />
     <Content Include="Panel-Theme\css\animate.min.css" />
     <Content Include="Panel-Theme\css\bootstrap.min.css" />
     <Content Include="Panel-Theme\css\demo.css" />
@@ -81,13 +80,6 @@
     </Compile>
     <Compile Include="CategoryOperations.aspx.designer.cs">
       <DependentUpon>CategoryOperations.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="list.aspx.cs">
-      <DependentUpon>list.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="list.aspx.designer.cs">
-      <DependentUpon>list.aspx</DependentUpon>
     </Compile>
     <Compile Include="Panel.Master.cs">
       <DependentUpon>Panel.Master</DependentUpon>
