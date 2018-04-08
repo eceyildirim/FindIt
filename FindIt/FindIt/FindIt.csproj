@@ -49,6 +49,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="CategoryOperations.aspx" />
     <Content Include="Images\sidebar.jpg" />
     <Content Include="Panel-Theme\css\animate.min.css" />
@@ -69,12 +70,17 @@
     <Content Include="ProductOperations.aspx" />
     <Content Include="Script\jquery-3.2.1.min.js" />
     <Content Include="Script\jquery.cookie.js" />
+=======
+    <Content Include="loginSignup.aspx" />
+    <Content Include="Script\bootstrap.min.js" />
+>>>>>>> origin/loginSignup
     <Content Include="Script\script.js" />
     <Content Include="Search.aspx" />
     <Content Include="Style\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="CategoryOperations.aspx.cs">
       <DependentUpon>CategoryOperations.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -95,6 +101,14 @@
     </Compile>
     <Compile Include="ProductOperations.aspx.designer.cs">
       <DependentUpon>ProductOperations.aspx</DependentUpon>
+=======
+    <Compile Include="loginSignup.aspx.cs">
+      <DependentUpon>loginSignup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginSignup.aspx.designer.cs">
+      <DependentUpon>loginSignup.aspx</DependentUpon>
+>>>>>>> origin/loginSignup
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search.aspx.cs">

@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+C:\Users\Ece\FindIt\FindIt\FindIt\bin\FindIt.dll.config
+C:\Users\Ece\FindIt\FindIt\FindIt\bin\FindIt.dll
+C:\Users\Ece\FindIt\FindIt\FindIt\bin\FindIt.pdb
+C:\Users\Ece\FindIt\FindIt\FindIt\obj\Debug\FindIt.csprojResolveAssemblyReference.cache
+C:\Users\Ece\FindIt\FindIt\FindIt\obj\Debug\FindIt.dll
+C:\Users\Ece\FindIt\FindIt\FindIt\obj\Debug\FindIt.pdb
+>>>>>>> origin/loginSignup
 C:\Users\Gencay Karadeniz\Desktop\GitHubRepos\FindIt\FindIt\FindIt\bin\FindIt.dll.config
 C:\Users\Gencay Karadeniz\Desktop\GitHubRepos\FindIt\FindIt\FindIt\bin\FindIt.dll
 C:\Users\Gencay Karadeniz\Desktop\GitHubRepos\FindIt\FindIt\FindIt\bin\FindIt.pdb
