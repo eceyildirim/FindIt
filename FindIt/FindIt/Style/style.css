@@ -11,3 +11,38 @@
 .marbot-10{
     margin-bottom:10px;
 }
+.DrawCircle {
+    width: 40px;
+    height: 40px;
+    background-color: #417191;
+    -webkit-border-radius:20px;
+    -moz-border-radius: 20px;
+}
+.DrawSquare{
+    width:40px;
+    height:40px;
+    background-color:brown;
+}
+.DrawTriangle {
+    width: 0px;
+    height: 0px;
+    border-color: transparent transparent #ff913e transparent;
+    border-style: solid;
+    border-width: 30px 30px 30px 30px;
+    margin-top:-20px;
+}
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    text-align: center;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    text-align: center;
+}
+
+:-ms-input-placeholder {
+    text-align: center;
+}
