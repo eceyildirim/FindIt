@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="Kategori - Altkategori İşlemleri" Language="C#" MasterPageFile="~/Panel.Master" AutoEventWireup="true" CodeBehind="CategoryOperations.aspx.cs" Inherits="FindIt.CategoryOperations" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script>
+        $(document).ready(function () {
+            $("ul li").eq(1).addClass("active");
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     

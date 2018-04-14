@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Panel.Master" AutoEventWireup="true" CodeBehind="ProductOperations.aspx.cs" Inherits="FindIt.ProductOperations" %>
+﻿<%@ Page Title="Ürün İşlemleri" Language="C#" MasterPageFile="~/Panel.Master" AutoEventWireup="true" CodeBehind="ProductOperations.aspx.cs" Inherits="FindIt.ProductOperations" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script>

@@ -6,7 +6,7 @@
 <head runat="server">
 
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" href="Images/finditlogo.png"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     <title><%= Page.Title %> - Findit</title>
@@ -74,7 +74,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="table.html">
+                            <a href="MapDesign.aspx">
                                 <i class="pe-7s-map-2"></i>
                                 <p>Raf ve Harita İşlemleri</p>
                             </a>

@@ -16,8 +16,8 @@ namespace FindIt {
         /// btnSearch control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSearch;
         
@@ -25,8 +25,8 @@ namespace FindIt {
         /// btnProductAdd control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnProductAdd;
         
@@ -34,8 +34,8 @@ namespace FindIt {
         /// btnProductDelete control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnProductDelete;
         
@@ -43,8 +43,8 @@ namespace FindIt {
         /// btnProductUpdate control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnProductUpdate;
     }

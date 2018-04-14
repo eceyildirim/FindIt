@@ -9,7 +9,7 @@
     <link href="FlatlyTheme/bootstrap.min.css" rel="stylesheet" />
     <link href="FlatlyTheme/bootstrap.css" rel="stylesheet" />
     <link href="Style/style.css" rel="stylesheet" />
-
+    <link rel="icon" type="image/png" href="Images/finditlogo.png"/>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="Script/script.js"></script>
