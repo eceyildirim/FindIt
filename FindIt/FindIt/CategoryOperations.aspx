@@ -21,11 +21,11 @@
                     </div>
                     <div class="col-md-5">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Kategori Adı">
+                            <asp:TextBox ID="txtCategoryName" CssClass="form-control"  runat="server" placeholder="Kategori Adı"></asp:TextBox>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <asp:Button ID="btnCategoryAdd" CssClass="btn btn-success btn-fill pull-right" runat="server" Text="Ekle" />
+                        <asp:Button ID="btnCategoryAdd" CssClass="btn btn-success btn-fill pull-right" runat="server" Text="Ekle" OnClick="btnCategoryAdd_Click" />
                     </div>
                 </div>
                 <hr />

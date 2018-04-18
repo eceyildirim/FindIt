@@ -12,5 +12,21 @@ namespace FindIt
         {
 
         }
+
+        protected void btnCategoryAdd_Click(object sender, EventArgs e)
+        {
+            Kategori k = new Kategori();
+            k.Ad = txtCategoryName.Text;
+            KategoriDb kdb = new KategoriDb();
+            try
+            {
+                kdb.Insert(k);
+            }
+            catch (Exception hata)
+            {
+                Response.Write("<script LANGUAGE='JavaScript' >alert("+hata+")</script>");
+            }
+            Response.Redirect(Request.RawUrl);
+        }
     }
 }
