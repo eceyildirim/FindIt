@@ -218,6 +218,7 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="Classes\Database\AltKategoriDb.cs" />
     <Compile Include="Classes\Entity\AltKategori.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />

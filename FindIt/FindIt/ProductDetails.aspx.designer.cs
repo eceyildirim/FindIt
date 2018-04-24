@@ -16,8 +16,8 @@ namespace FindIt {
         /// form1 control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
     }

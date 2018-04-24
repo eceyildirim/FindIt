@@ -5,7 +5,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mağaza Haritası Tasarımı</title>
+    <title>Find It </title>
     <link href="FlatlyTheme/bootstrap.css" rel="stylesheet" />
     <link href="FlatlyTheme/bootstrap.min.css" rel="stylesheet" />
     <link href="Style/style.css" rel="stylesheet" />
