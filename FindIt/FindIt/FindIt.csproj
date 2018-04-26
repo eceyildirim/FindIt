@@ -223,7 +223,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="CategoryOperations.aspx.cs">
       <DependentUpon>CategoryOperations.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CategoryOperations.aspx.designer.cs">
       <DependentUpon>CategoryOperations.aspx</DependentUpon>
@@ -236,7 +235,6 @@
     <Compile Include="Classes\Database\KategoriDb.cs" />
     <Compile Include="loginSignup.aspx.cs">
       <DependentUpon>loginSignup.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="loginSignup.aspx.designer.cs">
       <DependentUpon>loginSignup.aspx</DependentUpon>
@@ -244,14 +242,12 @@
     <Compile Include="Classes\Database\MainDb.cs" />
     <Compile Include="MapDesign.aspx.cs">
       <DependentUpon>MapDesign.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MapDesign.aspx.designer.cs">
       <DependentUpon>MapDesign.aspx</DependentUpon>
     </Compile>
     <Compile Include="Panel.Master.cs">
       <DependentUpon>Panel.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Panel.Master.designer.cs">
       <DependentUpon>Panel.Master</DependentUpon>
@@ -262,14 +258,12 @@
     <Compile Include="Classes\Database\PersonelStatuDb.cs" />
     <Compile Include="ProductDetails.aspx.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ProductDetails.aspx.designer.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductOperations.aspx.cs">
       <DependentUpon>ProductOperations.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ProductOperations.aspx.designer.cs">
       <DependentUpon>ProductOperations.aspx</DependentUpon>
@@ -279,7 +273,6 @@
     <Compile Include="Classes\Database\RaflarDb.cs" />
     <Compile Include="Search.aspx.cs">
       <DependentUpon>Search.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
@@ -296,6 +289,7 @@
     <Content Include="packages.config" />
     <Content Include="ClassDiagrams\EntityDiagram.cd" />
     <Content Include="ClassDiagrams\DatabaseDiagram.cd" />
+    <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
