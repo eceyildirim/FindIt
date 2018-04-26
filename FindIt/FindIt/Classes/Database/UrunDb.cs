@@ -3,6 +3,8 @@ using System.Web;
 using System.Web.Services;
 using System.Web.Services.Protocols;
 using System.ComponentModel;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace FindIt
 {
@@ -11,6 +13,7 @@ namespace FindIt
         public override void Insert(IEntity entity)
         {
             throw new NotImplementedException();
+
         }
 
         public override void Delete(IEntity entity)
@@ -25,7 +28,10 @@ namespace FindIt
 
         public override System.Data.DataTable Lists(IEntity entity)
         {
+
             throw new NotImplementedException();
+
+
         }
     }
 }
