@@ -20,9 +20,9 @@
                         <asp:Image ID="Image1" runat="server" ImageUrl="Images/finditlogo.png" Height="300" Width="500" />
                     </div>
                     <div class="form-group ">
-                        <input class="form-control input-lg" id="inputlg" type="text" placeholder="Aradığınız ürünü buraya yazın" />
+                        <input type="text" class="form-control input-lg" id="inputlg" name="search"  placeholder="Aradığınız ürünü buraya yazın" />
                     </div>
-                    <asp:Button ID="btnSearch" CssClass="btn btn-success" runat="server" Text="Ara" Width="200" />
+                    <asp:Button ID="btnSearch" CssClass="btn btn-success" runat="server" Text="Ara" Width="200" OnClick="btnSearch_Click" />
                 </div>
                 <div class="col-lg-3"></div>
             </div>

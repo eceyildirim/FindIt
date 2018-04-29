@@ -31,7 +31,21 @@ namespace FindIt
 
         public override void Delete(IEntity entity)
         {
-            throw new NotImplementedException();
+            Kategori k = (Kategori)entity;
+            Connect();
+            command = new SqlCommand("sp_KategoriSil",connection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@categoryId", k.Id);
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (SqlException hata)
+            {
+                throw new Exception(hata.Message);
+            }
+            connection.Close();
+            connection.Dispose();
         }
 
         public override void Update(IEntity entity)
@@ -42,6 +56,19 @@ namespace FindIt
         public override System.Data.DataTable Lists(IEntity entity)
         {
             throw new NotImplementedException();
+        }
+
+        internal object CategoriesShow()
+        {
+            Connect();
+            command = new SqlCommand("SELECT * FROM tbl_Kategori",connection);
+            command.ExecuteNonQuery();
+            table = new DataTable();
+            adaptor = new SqlDataAdapter(command);
+            adaptor.Fill(table);
+            connection.Close();
+            connection.Dispose();
+            return table;
         }
     }
 }
