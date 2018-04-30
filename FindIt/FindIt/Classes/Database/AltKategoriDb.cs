@@ -98,5 +98,18 @@ namespace FindIt
             connection.Dispose();
             return category;
         }
+
+        internal object GetSubCategory(AltKategori a)
+        {
+            Connect();
+            command = new SqlCommand("SELECT * FROM tbl_AltKategori WHERE Kategori_id="+a.KategoriId.Id+"", connection);
+            command.ExecuteNonQuery();
+            table = new DataTable();
+            adaptor = new SqlDataAdapter(command);
+            adaptor.Fill(table);
+            connection.Close();
+            connection.Dispose();
+            return table;
+        }
     }
 }

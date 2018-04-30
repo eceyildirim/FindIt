@@ -103,6 +103,15 @@ namespace FindIt {
         protected global::System.Web.UI.WebControls.Button btnSubCategoryAdd;
         
         /// <summary>
+        /// DropDownListCategorySelect control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListCategorySelect;
+        
+        /// <summary>
         /// DropDownListSubCategoryDelete control.
         /// </summary>
         /// <remarks>
@@ -110,15 +119,6 @@ namespace FindIt {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownListSubCategoryDelete;
-        
-        /// <summary>
-        /// Label_Category control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label_Category;
         
         /// <summary>
         /// Label_SubCategoriesDeleteError control.

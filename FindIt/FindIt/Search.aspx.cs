@@ -19,6 +19,7 @@ namespace FindIt
         {
             string arama = Request.Params["search"] != null ? Request.Params["search"].ToString() : String.Empty;
             //Burada ise Request.Params ile search'ü aratıyorum. Boş değilse içindeki değeri alıp ToString() yapıyorum. Boş ise boş string atıyorum.
+            Response.Redirect("List.aspx?Search="+arama+"");
         }
     }
 }

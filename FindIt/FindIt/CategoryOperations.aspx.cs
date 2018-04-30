@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -11,29 +13,28 @@ namespace FindIt
         protected void Page_Load(object sender, EventArgs e)
         {
             CategoryListShow();
-            SubCategoryListShow();
-        }
-
-        private void SubCategoryListShow()
-        {
-            AltKategoriDb db = new AltKategoriDb();
-            DropDownListSubCategoryDelete.DataSource = db.SubCategoriesShow();
-            DropDownListSubCategoryDelete.DataValueField = "AltKategori_ID";
-            DropDownListSubCategoryDelete.DataTextField = "AltKategori_Ad";
-            DropDownListSubCategoryDelete.DataBind();
         }
 
         private void CategoryListShow()
         {
-            KategoriDb db = new KategoriDb();
-            DropDownListCategories.DataSource = db.CategoriesShow();
-            DropDownListCategories.DataValueField = "Kategori_ID";
-            DropDownListCategories.DataTextField = "Kategori_Ad";
-            DropDownListCategoryforSubCategory.DataSource = db.CategoriesShow();
-            DropDownListCategoryforSubCategory.DataValueField = "Kategori_ID";
-            DropDownListCategoryforSubCategory.DataTextField = "Kategori_Ad";
-            DropDownListCategoryforSubCategory.DataBind();
-            DropDownListCategories.DataBind();
+            if (!IsPostBack)
+            {
+                KategoriDb db = new KategoriDb();
+                DropDownListCategories.DataSource = db.CategoriesShow();
+                DropDownListCategories.DataValueField = "Kategori_ID";
+                DropDownListCategories.DataTextField = "Kategori_Ad";
+                DropDownListCategories.DataBind();
+
+                DropDownListCategoryforSubCategory.DataSource = db.CategoriesShow();
+                DropDownListCategoryforSubCategory.DataValueField = "Kategori_ID";
+                DropDownListCategoryforSubCategory.DataTextField = "Kategori_Ad";
+                DropDownListCategoryforSubCategory.DataBind();
+
+                DropDownListCategorySelect.DataSource = db.CategoriesShow();
+                DropDownListCategorySelect.DataValueField = "Kategori_ID";
+                DropDownListCategorySelect.DataTextField = "Kategori_Ad";
+                DropDownListCategorySelect.DataBind();
+            }
         }
 
         protected void btnCategoryAdd_Click(object sender, EventArgs e)
@@ -53,6 +54,7 @@ namespace FindIt
                 Label_Error.Text = hata.Message.ToString();
             }
             CategoryListShow();
+            Response.Redirect(HttpContext.Current.Request.Url.ToString(), true);
         }
 
         protected void btnCategoryDelete_Click(object sender, EventArgs e)
@@ -70,6 +72,7 @@ namespace FindIt
                 Label_ErrorDelete.Text = hata.Message.ToString();
             }
             CategoryListShow();
+            Response.Redirect(HttpContext.Current.Request.Url.ToString(), true);
         }
 
         protected void btnSubCategoryAdd_Click(object sender, EventArgs e)
@@ -89,7 +92,7 @@ namespace FindIt
                 Label_SubCategoryError.Text = hata.Message.ToString();
             }
             txtAltKategori.Text = "";
-            SubCategoryListShow();
+            Response.Redirect(HttpContext.Current.Request.Url.ToString(), true);
         }
 
         protected void btnSubCategoryDelete_Click(object sender, EventArgs e)
@@ -107,18 +110,18 @@ namespace FindIt
                 Label_SubCategoriesDeleteError.Visible = true;
                 Label_SubCategoriesDeleteError.Text = hata.Message;
             }
-            SubCategoryListShow();
+            Response.Redirect(HttpContext.Current.Request.Url.ToString(), true);
         }
 
-
-        protected void DropDownListSubCategoryDelete_SelectedIndexChanged(object sender, EventArgs e)
+        protected void DropDownListCategorySelect_SelectedIndexChanged(object sender, EventArgs e)
         {
             AltKategori a = new AltKategori();
-            a.Id = Convert.ToInt16(DropDownListSubCategoryDelete.SelectedItem.Value);
+            a.KategoriId.Id = Convert.ToInt16(DropDownListCategorySelect.SelectedItem.Value);
             AltKategoriDb db = new AltKategoriDb();
-            string category = db.GetCategory(a);
-            Label_Category.Visible = true;
-            Label_Category.Text = category;
+            DropDownListSubCategoryDelete.DataSource = db.GetSubCategory(a);
+            DropDownListSubCategoryDelete.DataTextField = "AltKategori_Ad";
+            DropDownListSubCategoryDelete.DataValueField = "AltKategori_ID";
+            DropDownListSubCategoryDelete.DataBind();
         }
     }
 }
