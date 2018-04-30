@@ -13,11 +13,47 @@ namespace FindIt {
     public partial class ProductOperations {
         
         /// <summary>
+        /// txtUrunAd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtUrunAd;
+        
+        /// <summary>
+        /// txtBarkod control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBarkod;
+        
+        /// <summary>
+        /// DropDownListCategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListCategory;
+        
+        /// <summary>
+        /// DropDownListSubCategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListSubCategory;
+        
+        /// <summary>
         /// btnSearch control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSearch;
         
@@ -25,8 +61,8 @@ namespace FindIt {
         /// btnProductAdd control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnProductAdd;
         
@@ -34,8 +70,8 @@ namespace FindIt {
         /// btnProductDelete control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnProductDelete;
         
@@ -43,8 +79,8 @@ namespace FindIt {
         /// btnProductUpdate control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnProductUpdate;
     }

@@ -18,13 +18,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Ürün Ad</label>
-                            <input type="text" class="form-control" name="productName" placeholder="Ürün Adı" />
+                            <asp:TextBox ID="txtUrunAd" CssClass="form-control" runat="server" placeholder="Ürün Adı"></asp:TextBox>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Ürün Barkod</label>
-                            <input type="text" class="form-control" placeholder="Ürün Barkodu">
+                            <asp:TextBox ID="txtBarkod" CssClass="form-control" runat="server" placeholder="Ürün Barkodu"></asp:TextBox>
                         </div>
                     </div>
                 </div>
@@ -32,13 +32,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Ürün Fiyat</label>
-                            <input type="number" class="form-control" min="0" />
+                            <input type="number" name ="cost" class="form-control" min="0" value="<%=cost %>" />
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Ürün Stok</label>
-                            <input type="number" class="form-control" min="0" />
+                            <input type="number" name ="stock" class="form-control" min="0" value="<%=stock %>" />
                         </div>
                     </div>
                 </div>
@@ -46,21 +46,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Kategoriler</label>
-                            <select class="form-control">
-                                <option>Elektrikli Ev Aletleri</option>
-                                <option>Beyaz Eşya</option>
-                                <option>Mobilya</option>
-                            </select>
+                            <asp:DropDownList ID="DropDownListCategory" CssClass="form-control" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownListCategory_SelectedIndexChanged"></asp:DropDownList>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Alt Kategoriler</label>
-                            <select class="form-control">
-                                <option>Elektrikli Ev Aletleri</option>
-                                <option>Beyaz Eşya</option>
-                                <option>Mobilya</option>
-                            </select>
+                            <asp:DropDownList ID="DropDownListSubCategory" CssClass="form-control" runat="server"></asp:DropDownList>
                         </div>
                     </div>
                 </div>
@@ -68,7 +60,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Ürün Özellikleri</label>
-                            <textarea class="form-control" placeholder="Ürün özelliklerini giriniz." style="resize: none;"></textarea>
+                            <textarea class="form-control" placeholder="Ürün özelliklerini giriniz." name ="features" style="resize: none;" value="<%=features %>"></textarea>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -102,7 +94,7 @@
                             <asp:Button ID="btnSearch" runat="server" CssClass="btn btn-fill btn-info" Text="Ara" />
                         </div>
                         <div class="col-md-4">
-                            <asp:Button ID="btnProductAdd" CssClass="btn btn-fill btn-success marbot-10" runat="server" Text="Ekle" Width="100" />
+                            <asp:Button ID="btnProductAdd" CssClass="btn btn-fill btn-success marbot-10" runat="server" Text="Ekle" Width="100" OnClick="btnProductAdd_Click" />
                             <asp:Button ID="btnProductDelete" CssClass="btn btn-fill btn-danger marbot-10" runat="server" Text="Sil" Width="100" />
                             <asp:Button ID="btnProductUpdate" CssClass="btn btn-fill btn-primary marbot-10" runat="server" Text="Güncelle" Width="100" />
                         </div>
