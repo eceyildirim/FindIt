@@ -19,7 +19,7 @@ namespace FindIt
             command.Parameters.AddWithValue("@productName", u.Ad);
             command.Parameters.AddWithValue("@productCost", u.Fiyat);
             command.Parameters.AddWithValue("@productBarcode", u.Barkod);
-            command.Parameters.AddWithValue("@subcategoryId", u.AltKategoriId);
+            command.Parameters.AddWithValue("@subcategoryId", u.AltKategoriId.Id);
             command.Parameters.AddWithValue("@productStock", u.Stok);
             command.Parameters.AddWithValue("@personalId", u.PersonelId.Id);
             command.Parameters.AddWithValue("@productEspecial", u.Ozellikler);
@@ -37,7 +37,13 @@ namespace FindIt
 
         public override void Delete(IEntity entity)
         {
-            throw new NotImplementedException();
+            Urun u = (Urun)entity;
+            Connect();
+            command = new SqlCommand("DELETE FROM tbl_Urun WHERE Urun_Barkod LIKE @barcode",connection);
+            command.Parameters.AddWithValue("@barcode",u.Barkod);
+            command.ExecuteNonQuery();
+            connection.Close();
+            connection.Dispose();
         }
 
         public override void Update(IEntity entity)
@@ -45,9 +51,28 @@ namespace FindIt
             throw new NotImplementedException();
         }
 
-        public override System.Data.DataTable Lists(IEntity entity)
+        public override DataTable Lists(IEntity entity)
         {
             throw new NotImplementedException();
+        }
+
+        internal int GetProductID(Urun u)
+        {
+            int productID = 0;
+            Connect();
+            command = new SqlCommand("SELECT Urun_ID FROM tbl_Urun WHERE Urun_Barkod LIKE @barcode",connection);
+            command.Parameters.AddWithValue("@barcode",u.Barkod);
+            command.ExecuteNonQuery();
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                productID = Convert.ToInt16(reader["Urun_ID"]);
+            }
+            reader.Close();
+            reader.Dispose();
+            connection.Close();
+            connection.Dispose();
+            return productID;
         }
     }
 }

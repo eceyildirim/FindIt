@@ -111,5 +111,23 @@ namespace FindIt
             connection.Dispose();
             return table;
         }
+
+        internal string GetSubCategoryName(AltKategori a)
+        {
+            string subCategory = "";
+            Connect();
+            command = new SqlCommand("SELECT * FROM tbl_AltKategori WHERE AltKategori_ID = " + a.Id + "", connection);
+            command.ExecuteNonQuery();
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                subCategory = reader["AltKategori_Ad"].ToString();
+            }
+            reader.Close();
+            reader.Dispose();
+            connection.Close();
+            connection.Dispose();
+            return subCategory;
+        }
     }
 }
