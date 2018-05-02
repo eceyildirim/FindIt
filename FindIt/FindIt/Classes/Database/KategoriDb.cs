@@ -70,5 +70,23 @@ namespace FindIt
             connection.Dispose();
             return table;
         }
+
+        internal string GetCategoryName(Kategori k)
+        {
+            string category = "";
+            Connect();
+            command = new SqlCommand("SELECT * FROM tbl_Kategori WHERE Kategori_ID = "+k.Id+"", connection);
+            command.ExecuteNonQuery();
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                category = reader["Kategori_Ad"].ToString();
+            }
+            reader.Close();
+            reader.Dispose();
+            connection.Close();
+            connection.Dispose();
+            return category;
+        }
     }
 }
