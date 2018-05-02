@@ -77,6 +77,7 @@ namespace FindIt
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+            
             Label_SearchNotFound.Text = "";
             Urun u = new Urun();
             u.Barkod = search = Request.Params["search"] != null ? Request.Params["search"].ToString() : String.Empty;
@@ -136,12 +137,13 @@ namespace FindIt
                 Label_CurrentSubCategory.Visible = true;
                 Label_CurrentSubCategory.Text = akdb.GetSubCategoryName(ak);
                 ShowCategory();
+                txtBarkod.Enabled = false;
             }
         }
 
         protected void btnProductDelete_Click(object sender, EventArgs e)
         {
-            
+
             Urun u = new Urun();
             u.Barkod = txtBarkod.Text;
             UrunDb db = new UrunDb();
@@ -153,6 +155,27 @@ namespace FindIt
             {
                 urdb.Delete(ur);
                 db.Delete(u);
+            }
+            catch (Exception hata)
+            {
+                Response.Write("<script LANGUAGE='JavaScript' >alert('" + hata.Message.ToString() + "')</script>");
+            }
+            Response.Redirect(HttpContext.Current.Request.Url.ToString(), true);
+        }
+
+        protected void btnProductUpdate_Click(object sender, EventArgs e)
+        {
+            Urun u = new Urun();
+            u.Ad = txtUrunAd.Text;
+            u.Barkod = txtBarkod.Text;
+            u.Ozellikler = txtFeatures.Text;
+            u.Stok = Convert.ToInt16(txtStock.Text);
+            u.AltKategoriId.Id = Convert.ToInt16(DropDownListSubCategory.SelectedItem.Value);
+            u.Fiyat = Convert.ToDecimal(txtCost.Text);
+            UrunDb db = new UrunDb();
+            try
+            {
+                db.Update(u);
             }
             catch (Exception hata)
             {

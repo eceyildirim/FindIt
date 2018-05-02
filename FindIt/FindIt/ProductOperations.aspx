@@ -100,7 +100,7 @@
                         <div class="col-md-4">
                             <asp:Button ID="btnProductAdd" CssClass="btn btn-fill btn-success marbot-10" runat="server" Text="Ekle" Width="100" OnClick="btnProductAdd_Click" />
                             <asp:Button ID="btnProductDelete" CssClass="btn btn-fill btn-danger marbot-10" runat="server" Text="Sil" Width="100" OnClick="btnProductDelete_Click" />
-                            <asp:Button ID="btnProductUpdate" CssClass="btn btn-fill btn-primary marbot-10" runat="server" Text="Güncelle" Width="100" />
+                            <asp:Button ID="btnProductUpdate" CssClass="btn btn-fill btn-primary marbot-10" runat="server" Text="Güncelle" Width="100" OnClick="btnProductUpdate_Click" />
                         </div>
                         <div class="col-md-8"></div>
                     </div>

@@ -48,7 +48,26 @@ namespace FindIt
 
         public override void Update(IEntity entity)
         {
-            throw new NotImplementedException();
+            Urun u = (Urun)entity;
+            Connect();
+            command = new SqlCommand("sp_ProductUpdate",connection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@barcode",u.Barkod);
+            command.Parameters.AddWithValue("@productName",u.Ad);
+            command.Parameters.AddWithValue("@productCost",u.Fiyat);
+            command.Parameters.AddWithValue("@productStock",u.Stok);
+            command.Parameters.AddWithValue("@productFeatures",u.Ozellikler);
+            command.Parameters.AddWithValue("@productSubCategory",u.AltKategoriId.Id);
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (SqlException hata)
+            {
+                throw new Exception(hata.Message);
+            }
+            connection.Close();
+            connection.Dispose();
         }
 
         public override DataTable Lists(IEntity entity)
