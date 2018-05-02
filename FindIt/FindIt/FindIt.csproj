@@ -33,7 +33,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -208,7 +207,6 @@
     <Content Include="Panel-Theme\sass\light-bootstrap-dashboard.scss" />
     <Content Include="loginSignup.aspx" />
     <Content Include="ProductDetails.aspx" />
-    <Content Include="ProductList.aspx" />
     <Content Include="ProductOperations.aspx" />
     <Content Include="Script\bootstrap.min.js" />
     <Content Include="Script\jquery-3.2.1.min.js" />
@@ -268,13 +266,6 @@
     </Compile>
     <Compile Include="ProductDetails.aspx.designer.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ProductList.aspx.cs">
-      <DependentUpon>ProductList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ProductList.aspx.designer.cs">
-      <DependentUpon>ProductList.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductOperations.aspx.cs">
       <DependentUpon>ProductOperations.aspx</DependentUpon>
