@@ -141,6 +141,7 @@
     </Content>
     <Content Include="Images\finditlogo.png" />
     <Content Include="Images\sidebar.jpg" />
+    <Content Include="ListProduct.aspx" />
     <Content Include="MapDesign.aspx" />
     <Content Include="Panel-Theme\css\animate.min.css" />
     <Content Include="Panel-Theme\css\bootstrap.min.css" />
@@ -208,7 +209,6 @@
     <Content Include="Panel-Theme\sass\light-bootstrap-dashboard.scss" />
     <Content Include="loginSignup.aspx" />
     <Content Include="ProductDetails.aspx" />
-    <Content Include="ProductList.aspx" />
     <Content Include="ProductOperations.aspx" />
     <Content Include="Script\bootstrap.min.js" />
     <Content Include="Script\jquery-3.2.1.min.js" />
@@ -236,6 +236,13 @@
     <Compile Include="Classes\Entity\IEntity.cs" />
     <Compile Include="Classes\Entity\Kategori.cs" />
     <Compile Include="Classes\Database\KategoriDb.cs" />
+    <Compile Include="ListProduct.aspx.cs">
+      <DependentUpon>ListProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListProduct.aspx.designer.cs">
+      <DependentUpon>ListProduct.aspx</DependentUpon>
+    </Compile>
     <Compile Include="loginSignup.aspx.cs">
       <DependentUpon>loginSignup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -268,13 +275,6 @@
     </Compile>
     <Compile Include="ProductDetails.aspx.designer.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ProductList.aspx.cs">
-      <DependentUpon>ProductList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ProductList.aspx.designer.cs">
-      <DependentUpon>ProductList.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductOperations.aspx.cs">
       <DependentUpon>ProductOperations.aspx</DependentUpon>

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace FindIt
 {
-    public partial class ProductList : System.Web.UI.Page
+    public partial class ListProduct : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
