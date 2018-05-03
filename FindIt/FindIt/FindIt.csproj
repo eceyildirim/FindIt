@@ -140,6 +140,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\finditlogo.png" />
+    <Content Include="Images\indir.jpe" />
     <Content Include="Images\sidebar.jpg" />
     <Content Include="ListProduct.aspx" />
     <Content Include="MapDesign.aspx" />

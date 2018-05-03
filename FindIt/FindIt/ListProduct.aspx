@@ -15,8 +15,8 @@
         <div class="row justify-content-md-center" style="padding: 50px;">
             <div class="col-md-6">
                 <div class="input-group">
-                    <input class="form-control" id="ex3" type="text" placeholder="Aradığınız ürünü buraya yazın">
-                    <a href="#" class="btn btn-fill btn-success">Ara</a>
+                    <input type="text" class="form-control"   name="searchinpage"  placeholder="Aradığınız ürünü buraya yazın"/>
+                    <asp:Button ID="Button1" runat="server" CssClass="btn btn-fill btn-success" Text="Ara" OnClick="Button1_Click" />
                 </div>
             </div>
         </div>
@@ -30,12 +30,8 @@
                                 <div class="card-body">
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item">Kategoriler<a href="#"<i class="fa fa-plus pull-right"></i></a></li>
-                                        <li class="list-group-item">Marka<a href="#"<i class="fa fa-plus pull-right"></i></a></li>
                                         <li class="list-group-item">Fiyat Aralığı<a href="#"<i class="fa fa-plus pull-right"></i></a></li>
-                                        <li class="list-group-item">Listeleme Seçeneği<a href="#"<i class="fa fa-plus pull-right"></i></a></li>
                                         <li class="list-group-item">Stokta Olanlar<a href="#"<i class="fa fa-plus pull-right"></i></a></li>
-                                        <li class="list-group-item">Yeni Ürünler<a href="#"<i class="fa fa-plus pull-right"></i></a></li>
-                                        <li class="list-group-item">İndirimdekiler<a href="#"<i class="fa fa-minus pull-right"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -46,69 +42,8 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Special title treatment</h5>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="#" class="btn btn-fill btn-info">İncele</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Special title treatment</h5>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="#" class="btn btn-fill btn-info">İncele</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Special title treatment</h5>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="#" class="btn btn-fill btn-info">İncele</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <%=productLists %>
                             </div>
-
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Special title treatment</h5>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="#" class="btn btn-fill btn-info">İncele</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Special title treatment</h5>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="#" class="btn btn-fill btn-info">İncele</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Special title treatment</h5>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="#" class="btn btn-fill btn-info">İncele</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -117,43 +52,36 @@
         <div class="row justify-content-md-center" style="padding: 50px;">
             <div class="col-md-2">
                 <ul class="pagination">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#">&laquo;</a>
-                    </li>
                     <li class="page-item active">
                         <a class="page-link" href="#">1</a>
                     </li>
                     <li class="page-item">
-                        <a class="page-link" href="#">2</a>
+                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"?Page=2">2</a>
                     </li>
                     <li class="page-item">
-                        <a class="page-link" href="#">3</a>
+                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"?Page=3">3</a>
                     </li>
                     <li class="page-item">
-                        <a class="page-link" href="#">4</a>
+                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"?Page=4">4</a>
                     </li>
                     <li class="page-item">
-                        <a class="page-link" href="#">5</a>
+                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"?Page=5">5</a>
                     </li>
                     <li class="page-item active">
-                        <a class="page-link" href="#">6</a>
+                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"?Page=6">6</a>
                     </li>
                     <li class="page-item">
-                        <a class="page-link" href="#">7</a>
+                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"?Page=7">7</a>
                     </li>
                     <li class="page-item">
-                        <a class="page-link" href="#">8</a>
+                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"?Page=8">8</a>
                     </li>
                     <li class="page-item">
-                        <a class="page-link" href="#">9</a>
+                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"?Page=9">9</a>
                     </li>
                     <li class="page-item">
-                        <a class="page-link" href="#">10</a>
+                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"/?Page=10">10</a>
                     </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">&raquo;</a>
-                    </li>
-
                 </ul>
             </div>
         </div>
