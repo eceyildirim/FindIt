@@ -129,5 +129,18 @@ namespace FindIt
             connection.Dispose();
             return subCategory;
         }
+
+        internal object GetAllSubCategory()
+        {
+            Connect();
+            command = new SqlCommand("SELECT * FROM tbl_AltKategori", connection);
+            command.ExecuteNonQuery();
+            table = new DataTable();
+            adaptor = new SqlDataAdapter(command);
+            adaptor.Fill(table);
+            connection.Close();
+            connection.Dispose();
+            return table;
+        }
     }
 }
