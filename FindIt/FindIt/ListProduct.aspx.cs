@@ -14,14 +14,16 @@ namespace FindIt
         public string search = String.Empty;
         public string productLists = String.Empty;
         public string searchinpage = String.Empty;
+        public string stock = String.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
             search = Request.Params["Search"] != null ? Request.Params["Search"].ToString() : String.Empty;
             search = search.Replace('-', ' ');
-            GetProducts(search,"");
+            stock = Request.Params["Stok"] != null ? Request.Params["Stok"].ToString() : String.Empty;
+            GetProducts(search, stock);
         }
 
-        private void GetProducts(string search,string stok)
+        private void GetProducts(string search, string stok)
         {
             UrunDb db = new UrunDb();
             db.Connect();
@@ -29,7 +31,7 @@ namespace FindIt
             db.command.CommandType = CommandType.StoredProcedure;
             db.command.Parameters.AddWithValue("@search", search);
             db.command.Parameters.AddWithValue("@stok", stok);
-            db.command.Parameters.AddWithValue("@altkategori", 15);
+            db.command.Parameters.AddWithValue("@altkategori", 0);
             db.command.ExecuteNonQuery();
             db.reader = db.command.ExecuteReader();
             while (db.reader.Read())
@@ -55,20 +57,30 @@ namespace FindIt
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            search = Request.Params["Search"] != null ? Request.Params["Search"].ToString() : String.Empty;
+            search = search.Replace('-', ' ');
             searchinpage = Request.Params["searchinpage"] != null ? Request.Params["searchinpage"].ToString() : String.Empty;
             searchinpage = searchinpage.Replace(' ', '-');
-            Response.Redirect("ListProduct.aspx?Search="+searchinpage+"");
-            GetProducts(search,"");
-        }
-
-        protected void RadioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            GetProducts(search, "VAR");
-        }
-
-        protected void RadioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            GetProducts(search, "YOK");
+            if (search!="" && searchinpage=="")
+            {
+                searchinpage = search;
+            }
+            string stok = "";
+            if (RadioButton1.Checked)
+            {
+                stok = "yes";
+                Response.Redirect("ListProduct.aspx?Search=" + searchinpage + "&Stok=" + stok + "");
+            }
+            else if (RadioButton2.Checked)
+            {
+                stok = "no";
+                Response.Redirect("ListProduct.aspx?Search=" + searchinpage + "&Stok=" + stok + "");
+            }
+            else
+            {
+                Response.Redirect("ListProduct.aspx?Search=" + searchinpage + "");
+            }
+            GetProducts(search, stok);
         }
     }
 }

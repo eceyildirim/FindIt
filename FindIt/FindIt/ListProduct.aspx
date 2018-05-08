@@ -65,10 +65,10 @@
                                                 <div id="collapse2" class="panel-collapse collapse">
                                                     <ul class="list-group">
                                                         <li class="list-group-item">
-                                                            <asp:RadioButton ID="RadioButton1" GroupName="stok" runat="server" Text="Stokta var" OnCheckedChanged="RadioButton1_CheckedChanged" />
+                                                            <asp:RadioButton ID="RadioButton1" GroupName="stokgrup" runat="server" Text="Stokta var"  />
                                                         </li>
                                                         <li class="list-group-item">
-                                                            <asp:RadioButton ID="RadioButton2" GroupName="stok" runat="server" Text="Stokta yok" OnCheckedChanged="RadioButton2_CheckedChanged" />
+                                                            <asp:RadioButton ID="RadioButton2" GroupName="stokgrup" runat="server" Text="Stokta yok" />
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -89,42 +89,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row justify-content-md-center" style="padding: 50px;">
-            <div class="col-md-2">
-                <ul class="pagination">
-                    <li class="page-item active">
-                        <a class="page-link" href="#">1</a>
-                        <%--</li>
-                    <li class="page-item">
-                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"?Page=2">2</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"?Page=3">3</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"?Page=4">4</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"?Page=5">5</a>
-                    </li>
-                    <li class="page-item active">
-                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"?Page=6">6</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"?Page=7">7</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"?Page=8">8</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"?Page=9">9</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="ListProduct.aspx?Search="+<%=search %>+"/?Page=10">10</a>
-                    </li>--%>
-                </ul>
             </div>
         </div>
     </form>
