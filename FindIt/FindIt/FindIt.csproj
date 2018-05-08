@@ -142,6 +142,7 @@
     <Content Include="Images\finditlogo.png" />
     <Content Include="Images\indir.jpe" />
     <Content Include="Images\sidebar.jpg" />
+    <Content Include="Images\solucangubresi.jpeg" />
     <Content Include="ListProduct.aspx" />
     <Content Include="MapDesign.aspx" />
     <Content Include="Panel-Theme\css\animate.min.css" />

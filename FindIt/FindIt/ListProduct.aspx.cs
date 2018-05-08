@@ -18,18 +18,18 @@ namespace FindIt
         {
             search = Request.Params["Search"] != null ? Request.Params["Search"].ToString() : String.Empty;
             search = search.Replace('-', ' ');
-            GetProducts(search);
-            
-
+            GetProducts(search,"");
         }
 
-        private void GetProducts(string search)
+        private void GetProducts(string search,string stok)
         {
             UrunDb db = new UrunDb();
             db.Connect();
             db.command = new SqlCommand("sp_SearchProductList", db.connection);
             db.command.CommandType = CommandType.StoredProcedure;
             db.command.Parameters.AddWithValue("@search", search);
+            db.command.Parameters.AddWithValue("@stok", stok);
+            db.command.Parameters.AddWithValue("@altkategori", 15);
             db.command.ExecuteNonQuery();
             db.reader = db.command.ExecuteReader();
             while (db.reader.Read())
@@ -58,7 +58,17 @@ namespace FindIt
             searchinpage = Request.Params["searchinpage"] != null ? Request.Params["searchinpage"].ToString() : String.Empty;
             searchinpage = searchinpage.Replace(' ', '-');
             Response.Redirect("ListProduct.aspx?Search="+searchinpage+"");
-            GetProducts(search);
+            GetProducts(search,"");
+        }
+
+        protected void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            GetProducts(search, "VAR");
+        }
+
+        protected void RadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            GetProducts(search, "YOK");
         }
     }
 }
