@@ -6,8 +6,14 @@
             $("ul li").eq(2).addClass("active");
         });
     </script>
+    <link rel="stylesheet" href="http://localhost:58782/code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <input id="harita" type="hidden" name="html" />
+    <input type="hidden" name="operation" value="save" />
     <div class="row">
         <div class="col-md-6">
             <div class="row">
@@ -38,7 +44,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="form-group">
-                                    <asp:DropDownList ID="DropDownList_SubCategorySelect" CssClass="form-control" runat="server" ></asp:DropDownList>
+                                    <asp:DropDownList ID="DropDownList_SubCategorySelect" CssClass="form-control" runat="server"></asp:DropDownList>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +108,8 @@
                     <h4 class="title">Mağaza Haritası</h4>
                 </div>
                 <div class="content">
-                    <div id="shelfsArea" class="container" style="background-color:#bdbdbd;width:100%; height:400px;"></div>
+                    <div id="shelfsArea" class="container" style="background-color: #bdbdbd; width: 100%; height: 400px;"></div>
+                    <button id="submitButton" type="submit" class="btn btn-success btn-fill" style="float: right; margin-top: 10px;" onclick="getHtml()">Ekle</button>
                 </div>
             </div>
         </div>

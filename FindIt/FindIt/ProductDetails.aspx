@@ -19,12 +19,6 @@
     <script src="Script/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="Script/leader-line.js"></script>
     <script src="Script/leader-line.min.js.js"></script>
-    <%--<script>
-        $(document).ready(function () {
-            $("ul li").eq(1).addClass("active");
-        });
-    </script>--%>
-    <%--    neymiş bak--%>
 </head>
 <body class="body-costumer">
     <form id="form1" runat="server">

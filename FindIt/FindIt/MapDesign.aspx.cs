@@ -13,8 +13,21 @@ namespace FindIt
         public string rafAd = String.Empty;
         public string raflar = String.Empty;
         public int rafDeleteID = 0;
+        public string html = String.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
+            string operation = Request.Params["operation"] != null ? Request.Params["operation"].ToString() : String.Empty;
+            if (operation.ToLower() =="save")
+            {
+                html=Request.Params["html"] != null ? Request.Params["html"].ToString() : String.Empty;
+                RaflarDb db = new RaflarDb();
+                db.Connect();
+                db.command = new SqlCommand("INSERT INTO tbl_Harita (Harita_Tasarim) VALUES (@html)",db.connection);
+                db.command.Parameters.AddWithValue("@html",html);
+                db.command.ExecuteNonQuery();
+                db.connection.Close();
+                db.connection.Dispose();
+            }
             rafDeleteID = Request.Params["Delete"] != null ? Convert.ToInt16(Request.Params["Delete"]) : 0;
             if (rafDeleteID != 0)
             {
@@ -120,6 +133,11 @@ namespace FindIt
             db.reader.Dispose();
             db.connection.Close();
             db.connection.Dispose();
+        }
+
+        protected void btnMapAdd_Click(object sender, EventArgs e)
+        {
+            html = Request.Params["html"] != null ? Request.Params["html"].ToString() : String.Empty;
         }
     }
 }

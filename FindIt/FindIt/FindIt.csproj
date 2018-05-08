@@ -219,7 +219,7 @@
     <Content Include="Script\leader-line.min.js.js" />
     <Content Include="Script\script.js" />
     <Content Include="Search.aspx" />
-    <Content Include="style.css" />
+    <Content Include="Style\style.css" />
     <Content Include="Style\leader-line.css" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
