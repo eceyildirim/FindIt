@@ -6,10 +6,6 @@
     $("#raf" + id + "").draggable({
         containment: 'parent'
     });
-    $(function () {
-        $(".DrawSquare").resizable();
-        $(".DrawCircle").resizable();
-    });
 }
 function getHtml() {
     $('#harita').val($('#shelfsArea').html());

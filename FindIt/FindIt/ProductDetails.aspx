@@ -113,17 +113,7 @@
                         <h4 class="title">Ürün Haritası</h4>
                         <h6 class="card-subtitle mb-3 text-muted">Aradığınız ürünü haritayı kullanarak kolaylıkla bulabilirsiniz.</h6>
                         <div id="shelfsArea" class="container" style="background-color: #bdbdbd; width: 100%; height: 400px;">
-                            <div id="raf1" class="DrawSquare text-center text-muted ui-draggable" style="cursor: move; position: relative;"></div>
-                            <div id="raf7" class="DrawSquare text-center text-muted ui-draggable" style="cursor: move; position: relative; left: 59px; top: -40px;"></div>
-                            <div id="raf2" class="DrawSquare text-center text-muted ui-draggable" style="cursor: move; position: relative; left: 0px; top: -38px;"></div>
-                            <div id="raf11" class="DrawSquare text-center text-muted ui-draggable" style="cursor: move; position: relative; left: 59px; top: -78px;"></div>
-                            <div id="raf12" class="DrawSquare text-center text-muted ui-draggable" style="cursor: move; position: relative; left: 0px; top: -75px;"></div>
-                            <div id="raf13" class="DrawSquare text-center text-muted ui-draggable" style="cursor: move; position: relative; left: 59px; top: -115px;"></div>
-                            <div id="raf14" class="DrawSquare text-center text-muted ui-draggable" style="cursor: move; position: relative; left: 128px; top: -240px;"></div>
-                            <div id="raf15" class="DrawSquare text-center text-muted ui-draggable" style="cursor: move; position: relative; left: 128px; top: -237px;"></div>
-                            <div id="raf16" class="DrawSquare text-center text-muted ui-draggable" style="cursor: move; position: relative; left: 128px; top: -236px;"></div>
-                            <div id="raf18" class="DrawCircle text-center text-muted ui-draggable" style="cursor: move; position: relative; left: 127px; top: -214px;"></div>
-                            <div id="raf17" class="DrawSquare text-center text-muted ui-draggable" style="cursor: move; position: relative; left: 33px; top: -258px;"></div>
+                            <%=harita %>
                         </div>
 
                     </div>

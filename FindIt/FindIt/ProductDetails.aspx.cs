@@ -13,6 +13,7 @@ namespace FindIt
         public  int UrunID=0;
         public string ekranID = String.Empty;
         public int rafID = 0;
+        public string harita = String.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
             UrunID = Convert.ToInt32(Request.QueryString["UrunID"]);
@@ -54,13 +55,9 @@ namespace FindIt
             SqlParameter shelfID = new SqlParameter("@rafID",SqlDbType.Int);
             shelfID.Direction = ParameterDirection.Output;
             command.Parameters.Add(shelfID);
-
-
             try
             {
                 command.ExecuteNonQuery();
-
-
                 string pName = productName.Value.ToString();
                 string pPrice = Convert.ToString(productPrice.Value);
                 string pStock = Convert.ToString(productStock.Value);
@@ -75,18 +72,22 @@ namespace FindIt
                 labelUrunFiyat.Text = pPrice;
                 productImage.ImageUrl = pImageURL;
 
-
+                dbProduct.command = new SqlCommand("SELECT * FROM tbl_Harita", dbProduct.connection);
+                dbProduct.command.ExecuteNonQuery();
+                dbProduct.reader = dbProduct.command.ExecuteReader();
+                while (dbProduct.reader.Read())
+                {
+                    harita = dbProduct.reader["Harita_Tasarim"].ToString();
+                }
+                dbProduct.reader.Close();
+                dbProduct.reader.Dispose();
             }
             catch (SqlException hata)
             {
                 throw new Exception(hata.Message);
             }
-
             dbProduct.connection.Close();
             dbProduct.connection.Dispose();
-
-
-
         }
     }
 }
