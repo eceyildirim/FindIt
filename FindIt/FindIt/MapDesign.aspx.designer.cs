@@ -13,11 +13,20 @@ namespace FindIt {
     public partial class MapDesign {
         
         /// <summary>
+        /// DropDownList_SubCategorySelect control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_SubCategorySelect;
+        
+        /// <summary>
         /// RadioButton_Square control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton RadioButton_Square;
         
@@ -25,8 +34,8 @@ namespace FindIt {
         /// RadioButton_Circle control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton RadioButton_Circle;
         
@@ -34,36 +43,18 @@ namespace FindIt {
         /// RadioButton_Triangle control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton RadioButton_Triangle;
         
         /// <summary>
-        /// shelfDelete1 control.
+        /// btnAddShelf control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton shelfDelete1;
-        
-        /// <summary>
-        /// shelfDelete2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton shelfDelete2;
-        
-        /// <summary>
-        /// shelfDelete3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton shelfDelete3;
+        protected global::System.Web.UI.WebControls.Button btnAddShelf;
     }
 }

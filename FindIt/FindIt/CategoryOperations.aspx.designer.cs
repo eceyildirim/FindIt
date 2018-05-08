@@ -13,11 +13,29 @@ namespace FindIt {
     public partial class CategoryOperations {
         
         /// <summary>
+        /// txtCategoryName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCategoryName;
+        
+        /// <summary>
+        /// Label_Error control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_Error;
+        
+        /// <summary>
         /// btnCategoryAdd control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCategoryAdd;
         
@@ -25,26 +43,53 @@ namespace FindIt {
         /// DropDownListCategories control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownListCategories;
+        
+        /// <summary>
+        /// Label_ErrorDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_ErrorDelete;
         
         /// <summary>
         /// btnCategoryDelete control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCategoryDelete;
+        
+        /// <summary>
+        /// txtAltKategori control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAltKategori;
+        
+        /// <summary>
+        /// Label_SubCategoryError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_SubCategoryError;
         
         /// <summary>
         /// DropDownListCategoryforSubCategory control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownListCategoryforSubCategory;
         
@@ -52,26 +97,44 @@ namespace FindIt {
         /// btnSubCategoryAdd control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubCategoryAdd;
+        
+        /// <summary>
+        /// DropDownListCategorySelect control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListCategorySelect;
         
         /// <summary>
         /// DropDownListSubCategoryDelete control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownListSubCategoryDelete;
+        
+        /// <summary>
+        /// Label_SubCategoriesDeleteError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_SubCategoriesDeleteError;
         
         /// <summary>
         /// btnSubCategoryDelete control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated id.
-        /// To modify move id declaration from designer file to code-behind file.
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubCategoryDelete;
     }

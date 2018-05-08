@@ -29,11 +29,19 @@ namespace FindIt
             get { return altKategoriId; }
             set { altKategoriId = value; }
         }
+        private string sekil;
+
+        public string Sekil
+        {
+            get { return sekil; }
+            set { sekil = value; }
+        }
         public Raflar()
         {
             this.Id = 0;
             this.AltKategoriId = new AltKategori();
             this.Ad = "";
+            this.Sekil = "";
         }
     }
 }
