@@ -109,7 +109,7 @@ namespace FindIt
                                         "{2}" +
                                     "</td>" +
                                     "<td>" +
-                                    "<input type='button'  class='btn btn-success' onClick='AddShelf({3})' Value='Ekle'/>" +
+                                    "<input id='btn{3}' type='button'  class='btn btn-success' onClick='AddShelf({3})' Value='Ekle'/>" +
                                     "</td>" +
                                     "<td>" +
                                     "<a href='MapDesign.aspx?Delete={3}' class='text-danger'>Sil</a>" +
