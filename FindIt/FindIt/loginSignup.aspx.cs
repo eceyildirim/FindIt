@@ -19,67 +19,7 @@ namespace FindIt
         //Kullanıcı girişi sağlamak için;
         public void ButtonLogin_Click(object sender, EventArgs e)
         {
-            Personel Employee = new Personel();
-            Employee.Tc = textPasswordP.Text;
-            Employee.Parola = textKullaniciAd.Text;
-
-
-            HttpCookie cookie = Request.Cookies["UserInformation"];
-            try
-            {
-                if (cookie == null)
-                {
-                    if (Employee.Tc != null && Employee.Parola != null)
-                    {
-                        PersonelDb dbEmployee = new PersonelDb();
-                        dbEmployee.Connect();
-                        SqlCommand command = new SqlCommand("sp_LogIn", dbEmployee.connection);
-                        command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@personelTC", Employee.Tc);
-                        command.Parameters.AddWithValue("@personelParola", Employee.Parola);
-
-                        SqlParameter personelAd = new SqlParameter("@personelAd", SqlDbType.NVarChar, 50);
-                        personelAd.Direction = ParameterDirection.Output;
-                        command.Parameters.Add(personelAd);
-
-                        SqlParameter personelSoyad = new SqlParameter("@personelSoyad", SqlDbType.NVarChar, 50);
-                        personelSoyad.Direction = ParameterDirection.Output;
-                        command.Parameters.Add(personelSoyad);
-
-                        SqlParameter personelStatu = new SqlParameter("@personelStatu", SqlDbType.Int);
-                        personelStatu.Direction = ParameterDirection.Output;
-                        command.Parameters.Add(personelStatu);
-
-                        command.ExecuteNonQuery();
-
-                        string kullaniciAd = personelAd.ToString();
-                        string kullaniciSoyad = personelSoyad.Value.ToString();
-                        string kullaniciStatu = personelStatu.Value.ToString();
-
-                        if (kullaniciAd != "")
-                        {
-                            HttpCookie cookies = new HttpCookie("UserInformation");
-                            cookies["name"] = kullaniciAd;
-                            cookies["surname"] = kullaniciSoyad;
-                            cookies["statu"] = kullaniciStatu;
-                            cookies.Expires = DateTime.Now.AddDays(1);
-                            Response.Cookies.Add(cookies);
-                            Response.Redirect("ProductDetails.aspx"); //deneme amaçlı 
-                        }
-                        else
-                        {
-                            Response.Write("< script LANGUAGE = 'JavaScript' > alert('Hatalı giriş! Tekrar Deneyin.') </ script > ");
-                        }
-                    }
-                }
-            }
-            catch (Exception hata)
-            {
-                Response.Redirect(hata.Message);
-                Response.Write("<script LANGUAGE='JavaScript' >alert(" + hata + ")</script>");
-
-            }
-            Response.Redirect(Request.RawUrl);
+           
         }
 
 
@@ -121,6 +61,37 @@ namespace FindIt
                 textCreateEmployeeSurname.Text = "";
             }
 
+        }
+
+        protected void ButtonLogin_Click1(object sender, EventArgs e)
+        {
+            Personel Employee = new Personel();
+            Employee.Tc = textPasswordP.Text;
+            Employee.Parola = textKullaniciAd.Text;
+            PersonelDb dbEmployee = new PersonelDb();
+            dbEmployee.Connect();
+            SqlCommand command = new SqlCommand("sp_LogIn", dbEmployee.connection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@personelTC", Employee.Tc);
+            command.Parameters.AddWithValue("@personelParola", Employee.Parola);
+
+            SqlParameter personelAd = new SqlParameter("@personelAd", SqlDbType.NVarChar, 50);
+            personelAd.Direction = ParameterDirection.Output;
+            command.Parameters.Add(personelAd);
+
+            SqlParameter personelSoyad = new SqlParameter("@personelSoyad", SqlDbType.NVarChar, 50);
+            personelSoyad.Direction = ParameterDirection.Output;
+            command.Parameters.Add(personelSoyad);
+
+            SqlParameter personelStatu = new SqlParameter("@personelStatu", SqlDbType.Int);
+            personelStatu.Direction = ParameterDirection.Output;
+            command.Parameters.Add(personelStatu);
+
+            command.ExecuteNonQuery();
+
+            string kullaniciAd = personelAd.ToString();
+            string kullaniciSoyad = personelSoyad.Value.ToString();
+            string kullaniciStatu = personelStatu.Value.ToString();
         }
     }
 }
