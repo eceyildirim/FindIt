@@ -3,9 +3,10 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Find It</title>
+         <form id="Form1" runat="server">  
 
+<head id="Head1" runat="server">
+    <title>Find It</title>
     <link href="FlatlyTheme/bootstrap.min.css" rel="stylesheet" />
     <link href="FlatlyTheme/bootstrap.css" rel="stylesheet" />
     <link href="Style/style.css" rel="stylesheet" />
@@ -42,38 +43,48 @@
                                 <h4>Üye Girişi</h4>
                                 <div class="form-group">
                                     <label for="textEmployeeTC">TC Kimlik Numarası</label>
-                                    <input type="text" class="form-control" id="textKullaniciAd" aria-describedby="textKullaniciAdiBilgi" placeholder="TC Kimlik Numaranızı Giriniz" style="width: 450px;" />
+                                    <asp:TextBox class="form-control" id="textKullaniciAd" placeholder="TC Kimlik Numaranızı Giriniz" runat="server" ></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <label for="passwordP">Parola</label>
-                                    <input type="password" class="form-control" id="passwordP" placeholder="Parolanızı Giriniz" style="width: 450px;" />
+                                    <asp:TextBox class="form-control" id="textPasswordP" placeholder="Parolanızı Giriniz" runat="server" TextMode="Password"></asp:TextBox>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Gönder</button>
-                            </div>
+  
+                                    <asp:Button ID="ButtonLogin" CssClass="btn btn-success" runat="server" Text="Gönder" Width="200" OnClick="ButtonLogin_Click" />
+                          </div>
                             <div class="tab-pane fade" id="signup" style="margin-top: 2em;">
                                 <h4>Yeni Üyelik</h4>
                                 <div class="form-group">
                                     <label for="textTC">TC Kimlik Numarası</label>
-                                    <input type="text" class="form-control" id="textTC" placeholder="TC Kimlik Numaranızı Giriniz" style="width: 450px;" />
-                                </div>
+                                    <asp:TextBox class="form-control" ID="textTC" placeholder="TC Kimlik Numaranızı Giriniz" runat="server" />
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorTextTC" runat="server" ControlToValidate="textTC" ErrorMessage="RequiredFieldValidator">Bu alan boş bırakılamaz!</asp:RequiredFieldValidator>
+                                      </div>
                                 <div class="form-group">
-                                    <label for="textCreateEmployeeName">KullanıcıAdı</label>
-                                    <input type="text" class="form-control" id="textCreateEmployee" placeholder="Adınızı Giriniz" style="width: 450px;" />
-                                </div>
+                                    <label for="textCreateEmployeeName">Ad</label>
+                                    <asp:TextBox class="form-control" id="textCreateEmployeeName" placeholder="Adınızı Giriniz" runat="server" />
+                                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorTCEN" runat="server" ControlToValidate="textCreateEmployeeName" ErrorMessage="RequiredFieldValidator">Bu alan boş bırakılamaz!</asp:RequiredFieldValidator>
+                                       </div>
                                 <div class="form-group">
                                     <label for="textCreateEmployeeSurname">Soyad</label>
-                                    <input type="password" class="form-control" id="textCreateEmployeeSurname" placeholder="Soyadınızı Giriniz" style="width: 450px;" />
-                                </div>
+                                    <asp:TextBox class="form-control" id="textCreateEmployeeSurname" placeholder="Soyadınızı Giriniz" runat="server" />
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorTCES" runat="server" ControlToValidate="textCreateEmployeeSurname" ErrorMessage="RequiredFieldValidator">Bu alan boş bırakılamaz!</asp:RequiredFieldValidator>
+                                       </div>
                                 <div class="form-group">
                                     <label for="passwordCreateP">Parola</label>
-                                    <input type="password" class="form-control" id="passwordCreateP" placeholder="Parolanızı Giriniz" style="width: 450px;" />
-                                </div>
+                                    <asp:TextBox class="form-control" id="passwordCreateP" placeholder="Parolanızı Giriniz" runat="server" TextMode="Password" />
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorPCP" runat="server" ControlToValidate="passwordCreateP" ErrorMessage="RequiredFieldValidator">Bu alan boş bırakılamaz!</asp:RequiredFieldValidator>
+                                    <asp:CompareValidator ID="CompareValidatorPassword" runat="server" ErrorMessage="Parolalar eşleşmiyor!" ControlToValidate="passwordCreateP2" ControlToCompare="passwordCreateP"></asp:CompareValidator>
+                                       </div>
                                 <div class="form-group">
                                     <label for="passwordCreateP2">Parola(Tekrar)</label>
-                                    <input type="password" class="form-control" id="passwordCreateP2" placeholder="Parolanızı Giriniz" style="width: 450px;" />
-                                </div>
-                                <button type="submit" class="btn btn-primary">Gönder</button>
-                            </div>
+                                    <asp:TextBox class="form-control" id="passwordCreateP2" placeholder="Parolanızı Giriniz" runat="server" TextMode="Password" />
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorPCP2" runat="server" ControlToValidate="passwordCreateP2" ErrorMessage="RequiredFieldValidator">Bu alan boş bırakılamaz!</asp:RequiredFieldValidator>
+                                     </div>
+                                    
+                         <asp:Button ID="signUpButton" CssClass="btn btn-success" runat="server" Text="Gönder" Width="200" OnClick="signUpButton_Click" />
+
+                                
+                             </div>
                         </div>
                     </div>
                 </div>
@@ -83,5 +94,5 @@
 
     </div>
 </body>
+</form>
 </html>
-
