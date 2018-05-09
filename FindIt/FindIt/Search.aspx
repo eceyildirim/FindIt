@@ -12,7 +12,7 @@
 </head>
 <body class="body-costumer">
     <form id="form1" runat="server">
-        <div class="container" style="margin: 300px auto;">
+        <div class="container" style="margin: 10px auto;">
             <div class="row">
                 <div class="col-lg-3"></div>
                 <div class="col-lg-6 text-center">

@@ -51,5 +51,18 @@ namespace FindIt
         {
             throw new NotImplementedException();
         }
+
+        internal object CategoriesShow()
+        {
+            Connect();
+            command = new SqlCommand("SELECT * FROM tbl_Raflar", connection);
+            command.ExecuteNonQuery();
+            table = new DataTable();
+            adaptor = new SqlDataAdapter(command);
+            adaptor.Fill(table);
+            connection.Close();
+            connection.Dispose();
+            return table;
+        }
     }
 }

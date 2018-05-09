@@ -19,15 +19,19 @@ namespace FindIt
             string operation = Request.Params["operation"] != null ? Request.Params["operation"].ToString() : String.Empty;
             if (operation.ToLower() =="save")
             {
-                html=Request.Params["html"] != null ? Request.Params["html"].ToString() : String.Empty;
-                RaflarDb db = new RaflarDb();
-                db.Connect();
-                db.command = new SqlCommand("INSERT INTO tbl_Harita (Harita_Tasarim) VALUES (@html)",db.connection);
-                db.command.Parameters.AddWithValue("@html",html);
-                db.command.ExecuteNonQuery();
-                db.connection.Close();
-                db.connection.Dispose();
+                Harita h = new Harita();
+                h.Harita1 = Request.Params["html"] != null ? Request.Params["html"].ToString() : String.Empty;
+                HaritaDb db = new HaritaDb();
+                try
+                {
+                    db.Insert(h);
+                }
+                catch (Exception hata)
+                {
+                    Response.Write("<script LANGUAGE='JavaScript' >alert('" + hata.Message.ToString() + "')</script>");
+                }
             }
+
             rafDeleteID = Request.Params["Delete"] != null ? Convert.ToInt16(Request.Params["Delete"]) : 0;
             if (rafDeleteID != 0)
             {

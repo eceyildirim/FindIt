@@ -64,6 +64,14 @@ namespace FindIt
             get { return ozellikler; }
             set { ozellikler = value; }
         }
+        private Raflar rafId;
+
+        public Raflar RafId
+        {
+            get { return rafId; }
+            set { rafId = value; }
+        }
+
         public Urun()
         {
             this.Id = 0;
@@ -74,6 +82,7 @@ namespace FindIt
             this.Stok = 0;
             this.Ozellikler = "";
             this.PersonelId = new Personel();
+            this.RafId = new Raflar();
         }
     }
 }

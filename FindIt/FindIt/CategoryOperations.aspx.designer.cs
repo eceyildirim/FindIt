@@ -16,8 +16,8 @@ namespace FindIt {
         /// txtCategoryName control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCategoryName;
         
@@ -25,8 +25,8 @@ namespace FindIt {
         /// Label_Error control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_Error;
         
@@ -34,8 +34,8 @@ namespace FindIt {
         /// btnCategoryAdd control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCategoryAdd;
         
@@ -43,8 +43,8 @@ namespace FindIt {
         /// DropDownListCategories control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownListCategories;
         
@@ -52,8 +52,8 @@ namespace FindIt {
         /// Label_ErrorDelete control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_ErrorDelete;
         
@@ -61,8 +61,8 @@ namespace FindIt {
         /// btnCategoryDelete control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCategoryDelete;
         
@@ -70,8 +70,8 @@ namespace FindIt {
         /// txtAltKategori control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAltKategori;
         
@@ -79,8 +79,8 @@ namespace FindIt {
         /// Label_SubCategoryError control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_SubCategoryError;
         
@@ -88,8 +88,8 @@ namespace FindIt {
         /// DropDownListCategoryforSubCategory control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownListCategoryforSubCategory;
         
@@ -97,8 +97,8 @@ namespace FindIt {
         /// btnSubCategoryAdd control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubCategoryAdd;
         
@@ -106,8 +106,8 @@ namespace FindIt {
         /// DropDownListCategorySelect control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownListCategorySelect;
         
@@ -115,8 +115,8 @@ namespace FindIt {
         /// DropDownListSubCategoryDelete control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownListSubCategoryDelete;
         
@@ -124,8 +124,8 @@ namespace FindIt {
         /// Label_SubCategoriesDeleteError control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_SubCategoriesDeleteError;
         
@@ -133,8 +133,8 @@ namespace FindIt {
         /// btnSubCategoryDelete control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated id.
+        /// To modify move id declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubCategoryDelete;
     }

@@ -25,7 +25,7 @@
 
         <div class="row">
             <div class="col-md-6" style="padding: 50px;">
-                <div class="card">
+                <div class="card" style="padding: 50px;">
                     <div class="header">
                         <h4 class="title">Ürün Detay</h4>
                     </div>
@@ -39,7 +39,7 @@
                                         </ol>
                                         <div class="carousel-inner">
                                             <div class="item active">
-                                                <asp:Image runat="server" ID="productImage" />
+                                                <asp:Image runat="server" ID="productImage" CssClass="img-responsive" Height="200" Width="200" />
                                             </div>
                                         </div>
                                         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -97,32 +97,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="card" style="padding: 10px;">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label>Benzer Ürünler</label>
-                        </div>
-                        <div class="col-md-6">
+                <div class="card" style="margin-top: 20px; padding: 20px;">
+                    <div class="header">
+                        <h4 class="title">Arama</h4>
+                    </div>
+                    <div class="content">
+                        <div class="form-group ">
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="inputlg" name="search" placeholder="Aradığınız ürünü buraya yazın" />
+                            </div>
+                            <div class="col-md-2">
+                                <asp:Button ID="btnSearch" CssClass="btn btn-success" runat="server" Text="Ara" Width="50" OnClick="btnSearch_Click" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6" style="padding: 50px;">
-                <div class="card">
+                <div class="card" style="padding: 25px;">
                     <div class="header">
                         <h4 class="title">Ürün Haritası</h4>
                         <h6 class="card-subtitle mb-3 text-muted">Aradığınız ürünü haritayı kullanarak kolaylıkla bulabilirsiniz.</h6>
+                    </div>
+                    <div class="content" style="padding: 10px;">
                         <div id="shelfsArea" class="container" style="background-color: #bdbdbd; width: 100%; height: 400px;">
                             <%=harita %>
-                        </div>
-
-                    </div>
-                    <div class="content">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card">
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -130,10 +129,13 @@
         </div>
     </form>
 </body>
-<script>new LeaderLine(
+<script>
+    new LeaderLine(
   document.getElementById('raf18'),
-  document.getElementById('raf'+<%=rafID%>+'')
-);</script>
+  document.getElementById('raf' +<%=rafID%> +''));
+  $('#raf' +<%=rafID%> +'').css('box-shadow', '0px 1px 19px 9px rgba(255,255,255,1');
+    $('#raf' +<%=rafID%> +'').css('background-color', '#ffe382');
+</script>
 <!-- Javascript File Written Us -->
-<script src="~/Script/script.js" type="text/javascript"></script>
+<script src="Script/script.js" type="text/javascript"></script>
 </html>

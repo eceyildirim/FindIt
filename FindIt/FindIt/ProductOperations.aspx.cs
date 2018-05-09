@@ -15,6 +15,16 @@ namespace FindIt
         protected void Page_Load(object sender, EventArgs e)
         {
             ShowCategory();
+            ShowShelf();
+        }
+
+        private void ShowShelf()
+        {
+            RaflarDb db = new RaflarDb();
+            DropDownListRaf.DataSource = db.CategoriesShow();
+            DropDownListRaf.DataValueField = "Raf_ID";
+            DropDownListRaf.DataTextField = "Raf_Ad";
+            DropDownListRaf.DataBind();
         }
 
         private void ShowCategory()
@@ -40,6 +50,7 @@ namespace FindIt
             u.Stok = Convert.ToInt16(txtStock.Text);
             u.AltKategoriId.Id = Convert.ToInt16(DropDownListSubCategory.SelectedItem.Value);
             u.Ozellikler = txtFeatures.Text;
+            u.RafId.Id = Convert.ToInt16(DropDownListRaf.SelectedItem.Value);
             UrunDb udb = new UrunDb();
             try
             {
@@ -51,7 +62,7 @@ namespace FindIt
             }
 
             UrunResim r = new UrunResim();
-            r.Yol = singlePicture;
+            r.Yol = "Images/"+singlePicture;
             UrunResimDb rdb = new UrunResimDb();
             try
             {

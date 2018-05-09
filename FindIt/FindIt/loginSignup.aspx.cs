@@ -11,87 +11,110 @@ namespace FindIt
 {
     public partial class loginSignup : System.Web.UI.Page
     {
+        public string name = String.Empty;
+        public string surName = String.Empty;
+        public string userId = String.Empty;
+        public string userStatu = String.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        //Kullanıcı girişi sağlamak için;
-        public void ButtonLogin_Click(object sender, EventArgs e)
+        protected void ButtonLogin_Click(object sender, EventArgs e)
         {
-           
+            HttpCookie cookie = Request.Cookies["UserInformation"];
+            if (cookie == null)
+            {
+                Personel p = new Personel();
+                p.Tc = textKullaniciAd.Text;
+                p.Parola = textPasswordP.Text;
+                PersonelDb db = new PersonelDb();
+                db.Connect();
+                db.command = new SqlCommand("sp_LogIn", db.connection);
+                db.command.CommandType = CommandType.StoredProcedure;
+                db.command.Parameters.AddWithValue("@personelTC", p.Tc);
+                db.command.Parameters.AddWithValue("@personelParola", p.Parola);
+
+                SqlParameter kullaniciId = new SqlParameter("@personelID", SqlDbType.Int);
+                kullaniciId.Direction = ParameterDirection.Output;
+                db.command.Parameters.Add(kullaniciId);
+
+                SqlParameter kullaniciStatu = new SqlParameter("@personelStatu", SqlDbType.Int);
+                kullaniciStatu.Direction = ParameterDirection.Output;
+                db.command.Parameters.Add(kullaniciStatu);
+
+                SqlParameter kullaniciName = new SqlParameter("@personelAd", SqlDbType.NVarChar, 50);
+                kullaniciName.Direction = ParameterDirection.Output;
+                db.command.Parameters.Add(kullaniciName);
+
+                SqlParameter kullaniciSurName = new SqlParameter("@personelSoyad", SqlDbType.NVarChar, 50);
+                kullaniciSurName.Direction = ParameterDirection.Output;
+                db.command.Parameters.Add(kullaniciSurName);
+
+                try
+                {
+                    db.command.ExecuteNonQuery();
+                }
+                catch (Exception hata)
+                {
+                    Response.Write("<script LANGUAGE='JavaScript' >alert('" + hata.Message.ToString() + "')</script>");
+                }
+
+                name = kullaniciName.Value.ToString();
+                surName = kullaniciSurName.Value.ToString();
+                userId = kullaniciId.Value.ToString();
+                userStatu = kullaniciStatu.Value.ToString();
+
+                if (Convert.ToInt32(userId) > 0)
+                {
+                    HttpCookie cookies = new HttpCookie("UserInformation");
+                    cookies["name"] = name;
+                    cookies["surname"] = surName;
+                    cookies["userID"] = userId;
+                    cookies["userStatu"] = userStatu;
+                    cookies.Expires = DateTime.Now.AddDays(1);
+                    Response.Cookies.Add(cookies);
+                    Response.Redirect("ProductOperations.aspx");
+                }
+                else
+                {
+                    Response.Write("<script LANGUAGE='JavaScript' >alert('Hatalı giriş! Tekrar Deneyin.')</script>");
+                }
+            }
+            else
+            {
+                Response.Redirect("Search.aspx");
+            }
         }
 
-
-
-        // Yeni kullanıcı oluşturmak için ;
-
-
-        public void signUpButton_Click(object sender, EventArgs e)
+        protected void signUpButton_Click(object sender, EventArgs e)
         {
-
-
-            Personel newEmployee = new Personel();
-            newEmployee.Tc = textTC.Text;
-            newEmployee.Ad = textCreateEmployeeName.Text;
-            newEmployee.Soyad = textCreateEmployeeSurname.Text;
-            newEmployee.Parola = passwordCreateP.Text;
-
-
-
-            PersonelDb pDb = new PersonelDb();
-
-            try
+            HttpCookie cookie = Request.Cookies["UserInformation"];
+            if (cookie == null)
             {
-                if (newEmployee.Parola == passwordCreateP2.Text)
-                    pDb.Insert(newEmployee);
+                if (passwordCreateP.Text == passwordCreateP2.Text)
+                {
+                    Personel p = new Personel();
+                    p.Ad = textCreateEmployeeName.Text;
+                    p.Soyad = textCreateEmployeeSurname.Text;
+                    p.Tc = textTC.Text;
+                    p.Parola = passwordCreateP.Text;
+                    PersonelDb db = new PersonelDb();
+                    try
+                    {
+                        db.Insert(p);
+                    }
+                    catch (Exception hata)
+                    {
+                        Response.Write("<script LANGUAGE='JavaScript' >alert('" + hata.Message.ToString() + "')</script>");
+                    }
 
+                    textCreateEmployeeName.Text = "";
+                    textCreateEmployeeSurname.Text = "";
+                    textTC.Text = "";
+                    passwordCreateP.Text = "";
+                }
             }
-            catch (Exception hata)
-            {
-                Response.Write(hata.Message);
-
-            }
-            finally
-            {
-                passwordCreateP.Text = "";
-                passwordCreateP2.Text = "";
-                textTC.Text = "";
-                textCreateEmployeeName.Text = "";
-                textCreateEmployeeSurname.Text = "";
-            }
-
-        }
-
-        protected void ButtonLogin_Click1(object sender, EventArgs e)
-        {
-            Personel Employee = new Personel();
-            Employee.Tc = textPasswordP.Text;
-            Employee.Parola = textKullaniciAd.Text;
-            PersonelDb dbEmployee = new PersonelDb();
-            dbEmployee.Connect();
-            SqlCommand command = new SqlCommand("sp_LogIn", dbEmployee.connection);
-            command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@personelTC", Employee.Tc);
-            command.Parameters.AddWithValue("@personelParola", Employee.Parola);
-
-            SqlParameter personelAd = new SqlParameter("@personelAd", SqlDbType.NVarChar, 50);
-            personelAd.Direction = ParameterDirection.Output;
-            command.Parameters.Add(personelAd);
-
-            SqlParameter personelSoyad = new SqlParameter("@personelSoyad", SqlDbType.NVarChar, 50);
-            personelSoyad.Direction = ParameterDirection.Output;
-            command.Parameters.Add(personelSoyad);
-
-            SqlParameter personelStatu = new SqlParameter("@personelStatu", SqlDbType.Int);
-            personelStatu.Direction = ParameterDirection.Output;
-            command.Parameters.Add(personelStatu);
-
-            command.ExecuteNonQuery();
-
-            string kullaniciAd = personelAd.ToString();
-            string kullaniciSoyad = personelSoyad.Value.ToString();
-            string kullaniciStatu = personelStatu.Value.ToString();
         }
     }
 }

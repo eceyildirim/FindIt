@@ -68,6 +68,14 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
+                            <label>Raf</label>
+                            <asp:DropDownList ID="DropDownListRaf" CssClass="form-control" runat="server"></asp:DropDownList>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
                             <label>Ürün Görselleri</label>
                             <label class="btn btn-default" data-toggle="tooltip" title="İlk seçilen görsel anasayfada gözükür.">
                                 <input id="singlePicture" type="file" name="singlePicture" accept="image/*" value="<%=singlePicture %>" multiple>

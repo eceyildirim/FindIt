@@ -14,9 +14,10 @@ namespace FindIt
         public string ekranID = String.Empty;
         public int rafID = 0;
         public string harita = String.Empty;
+        public string search = String.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
-            UrunID = Convert.ToInt32(Request.QueryString["UrunID"]);
+            UrunID = Convert.ToInt32(Request.QueryString["ProductID"]);
 
 
             Urun Product = new Urun();
@@ -67,9 +68,9 @@ namespace FindIt
 
 
                 labelOzellikler.Text = pSpecial;
-                labelStokBilgi.Text = pStock;
+                labelStokBilgi.Text = pStock+" adet";
                 labelUrunAd.Text = pName;
-                labelUrunFiyat.Text = pPrice;
+                labelUrunFiyat.Text = pPrice+" ₺";
                 productImage.ImageUrl = pImageURL;
 
                 dbProduct.command = new SqlCommand("SELECT * FROM tbl_Harita", dbProduct.connection);
@@ -88,6 +89,12 @@ namespace FindIt
             }
             dbProduct.connection.Close();
             dbProduct.connection.Dispose();
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            search = Request.Params["search"] != null ? Request.Params["search"].ToString() : String.Empty;
+            Response.Redirect("ListProduct.aspx?Search=" + search + "");
         }
     }
 }

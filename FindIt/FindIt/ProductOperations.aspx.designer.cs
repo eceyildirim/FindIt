@@ -16,8 +16,8 @@ namespace FindIt {
         /// txtUrunAd control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated rafId.
+        /// To modify move rafId declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtUrunAd;
         
@@ -25,8 +25,8 @@ namespace FindIt {
         /// txtBarkod control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated rafId.
+        /// To modify move rafId declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBarkod;
         
@@ -34,8 +34,8 @@ namespace FindIt {
         /// DropDownListCategory control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated rafId.
+        /// To modify move rafId declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownListCategory;
         
@@ -43,8 +43,8 @@ namespace FindIt {
         /// Label_CurrentCategory control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated rafId.
+        /// To modify move rafId declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_CurrentCategory;
         
@@ -52,8 +52,8 @@ namespace FindIt {
         /// DropDownListSubCategory control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated rafId.
+        /// To modify move rafId declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownListSubCategory;
         
@@ -61,8 +61,8 @@ namespace FindIt {
         /// Label_CurrentSubCategory control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated rafId.
+        /// To modify move rafId declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_CurrentSubCategory;
         
@@ -70,8 +70,8 @@ namespace FindIt {
         /// txtCost control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated rafId.
+        /// To modify move rafId declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCost;
         
@@ -79,8 +79,8 @@ namespace FindIt {
         /// txtStock control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated rafId.
+        /// To modify move rafId declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtStock;
         
@@ -88,17 +88,26 @@ namespace FindIt {
         /// txtFeatures control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated rafId.
+        /// To modify move rafId declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFeatures;
+        
+        /// <summary>
+        /// DropDownListRaf control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated rafId.
+        /// To modify move rafId declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListRaf;
         
         /// <summary>
         /// Label_SearchNotFound control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated rafId.
+        /// To modify move rafId declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_SearchNotFound;
         
@@ -106,8 +115,8 @@ namespace FindIt {
         /// btnSearch control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated rafId.
+        /// To modify move rafId declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSearch;
         
@@ -115,8 +124,8 @@ namespace FindIt {
         /// btnProductAdd control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated rafId.
+        /// To modify move rafId declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnProductAdd;
         
@@ -124,8 +133,8 @@ namespace FindIt {
         /// btnProductDelete control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated rafId.
+        /// To modify move rafId declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnProductDelete;
         
@@ -133,8 +142,8 @@ namespace FindIt {
         /// btnProductUpdate control.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Auto-generated rafId.
+        /// To modify move rafId declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnProductUpdate;
     }

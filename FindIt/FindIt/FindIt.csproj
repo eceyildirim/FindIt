@@ -139,6 +139,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\dekor-yagli-boya-fircasi-2-adet__0827176528078006.jpeg" />
     <Content Include="Images\finditlogo.png" />
     <Content Include="Images\indir.jpe" />
     <Content Include="Images\sidebar.jpg" />
@@ -241,6 +242,8 @@
     <Compile Include="Classes\Entity\IEntity.cs" />
     <Compile Include="Classes\Entity\Kategori.cs" />
     <Compile Include="Classes\Database\KategoriDb.cs" />
+    <Compile Include="Classes\Entity\Harita.cs" />
+    <Compile Include="Classes\Database\HaritaDb.cs" />
     <Compile Include="ListProduct.aspx.cs">
       <DependentUpon>ListProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

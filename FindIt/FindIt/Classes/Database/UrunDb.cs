@@ -23,6 +23,7 @@ namespace FindIt
             command.Parameters.AddWithValue("@productStock", u.Stok);
             command.Parameters.AddWithValue("@personalId", u.PersonelId.Id);
             command.Parameters.AddWithValue("@productEspecial", u.Ozellikler);
+            command.Parameters.AddWithValue("@productShelf",u.RafId.Id);
             try
             {
                 command.ExecuteNonQuery();
